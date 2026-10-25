@@ -1,0 +1,487 @@
+{
+  "version": 1,
+  "title": "Applied AI Engineering",
+  "description": "Reconstructed 12-week Phase 11-first route for an FDE building applied AI skills. The earlier chat overlay was unavailable; this is a new implementation of the confirmed scope.",
+  "weeks": [
+    {
+      "number": 1,
+      "title": "Prompting with a baseline",
+      "goal": "Turn a real support workflow into a small, measurable product slice. Start directly in Phase 11; backfill prerequisites only when blocked.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/01-prompt-engineering",
+        "phases/11-llm-engineering/02-few-shot-cot",
+        "phases/11-llm-engineering/03-structured-outputs"
+      ],
+      "project": "projects/prompt-regression-tester",
+      "tasks": [
+        {
+          "id": "w1-read-1",
+          "kind": "Learn",
+          "label": "Read prompt engineering, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/01-prompt-engineering"
+        },
+        {
+          "id": "w1-read-2",
+          "kind": "Learn",
+          "label": "Read few shot cot, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/02-few-shot-cot"
+        },
+        {
+          "id": "w1-read-3",
+          "kind": "Learn",
+          "label": "Read structured outputs, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/03-structured-outputs"
+        },
+        {
+          "id": "w1-build",
+          "kind": "Build",
+          "label": "Create a 20-case input/output dataset, a prompt baseline, and a JSON output validator. Include ambiguous inputs and refusal cases."
+        },
+        {
+          "id": "w1-ship",
+          "kind": "Ship",
+          "label": "Record baseline pass rate and five failures. Explain the user problem, acceptance criteria, and what you deliberately left out."
+        },
+        {
+          "id": "w1-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Context & evaluation",
+      "goal": "Make quality measurable before adding retrieval or agents.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/05-context-engineering",
+        "phases/11-llm-engineering/10-evaluation"
+      ],
+      "project": "projects/local-model-eval-harness",
+      "tasks": [
+        {
+          "id": "w2-read-1",
+          "kind": "Learn",
+          "label": "Read context engineering, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/05-context-engineering"
+        },
+        {
+          "id": "w2-read-2",
+          "kind": "Learn",
+          "label": "Read evaluation, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/10-evaluation"
+        },
+        {
+          "id": "w2-build",
+          "kind": "Build",
+          "label": "Build a repeatable eval runner with expected answers, a failure taxonomy, and a held-out split. Compare two prompt versions."
+        },
+        {
+          "id": "w2-ship",
+          "kind": "Ship",
+          "label": "Save a versioned eval report. Define a minimum quality bar and explain why a small sample is not production proof."
+        },
+        {
+          "id": "w2-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Embeddings & retrieval",
+      "goal": "Find useful evidence before asking a model to answer.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/04-embeddings",
+        "phases/11-llm-engineering/06-rag"
+      ],
+      "project": "projects/retrieval-evaluation-lab",
+      "tasks": [
+        {
+          "id": "w3-read-1",
+          "kind": "Learn",
+          "label": "Read embeddings, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/04-embeddings"
+        },
+        {
+          "id": "w3-read-2",
+          "kind": "Learn",
+          "label": "Read rag, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/06-rag"
+        },
+        {
+          "id": "w3-build",
+          "kind": "Build",
+          "label": "Index a small public document collection. Compare keyword and vector retrieval on 20 labeled questions; keep the source IDs."
+        },
+        {
+          "id": "w3-ship",
+          "kind": "Ship",
+          "label": "Report retrieval recall and show a failure where the correct source is missing. Save the dataset and reproducible run command."
+        },
+        {
+          "id": "w3-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Grounded answers",
+      "goal": "Ship a citation-based assistant that knows when to abstain.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/07-advanced-rag"
+      ],
+      "project": "projects/doc-qa-with-citations",
+      "tasks": [
+        {
+          "id": "w4-read-1",
+          "kind": "Learn",
+          "label": "Read advanced rag, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/07-advanced-rag"
+        },
+        {
+          "id": "w4-build",
+          "kind": "Build",
+          "label": "Add chunking, metadata filters, citations, and an insufficient-evidence response. Evaluate distractors, missing answers, and conflicting documents."
+        },
+        {
+          "id": "w4-ship",
+          "kind": "Ship",
+          "label": "Deliver a runnable document Q&A prototype and a report separating retrieval failures from answer-generation failures."
+        },
+        {
+          "id": "w4-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Tools with boundaries",
+      "goal": "Move from answering to taking one controlled action.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/09-function-calling",
+        "phases/11-llm-engineering/12-guardrails"
+      ],
+      "project": "projects/tool-call-firewall",
+      "tasks": [
+        {
+          "id": "w5-read-1",
+          "kind": "Learn",
+          "label": "Read function calling, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/09-function-calling"
+        },
+        {
+          "id": "w5-read-2",
+          "kind": "Learn",
+          "label": "Read guardrails, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/12-guardrails"
+        },
+        {
+          "id": "w5-build",
+          "kind": "Build",
+          "label": "Add one tool with schema validation, an allowlist, a timeout, and a dry-run preview. Test prompt injection and invalid arguments."
+        },
+        {
+          "id": "w5-ship",
+          "kind": "Ship",
+          "label": "Show a safe success and a blocked unsafe request. Require human confirmation before any external side effect."
+        },
+        {
+          "id": "w5-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "A minimal agent loop",
+      "goal": "Understand the loop before choosing a framework.",
+      "hours": 8,
+      "lessons": [
+        "phases/14-agent-engineering/01-the-agent-loop",
+        "phases/14-agent-engineering/06-tool-use-and-function-calling",
+        "phases/14-agent-engineering/26-failure-modes-agentic"
+      ],
+      "project": "projects/tiny-coding-agent",
+      "tasks": [
+        {
+          "id": "w6-read-1",
+          "kind": "Learn",
+          "label": "Read the agent loop, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/01-the-agent-loop"
+        },
+        {
+          "id": "w6-read-2",
+          "kind": "Learn",
+          "label": "Read tool use and function calling, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/06-tool-use-and-function-calling"
+        },
+        {
+          "id": "w6-read-3",
+          "kind": "Learn",
+          "label": "Read failure modes agentic, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/26-failure-modes-agentic"
+        },
+        {
+          "id": "w6-build",
+          "kind": "Build",
+          "label": "Implement a bounded tool loop with step, token, and time budgets. Log tool inputs and outputs; cover tool failure and repeated calls."
+        },
+        {
+          "id": "w6-ship",
+          "kind": "Ship",
+          "label": "Ship an offline replay and explain the termination policy. Compare the agent to your simpler non-agent pipeline."
+        },
+        {
+          "id": "w6-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "MCP & integration",
+      "goal": "Expose a useful capability through a clear tool contract.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/14-model-context-protocol"
+      ],
+      "project": "projects/memory-server",
+      "tasks": [
+        {
+          "id": "w7-read-1",
+          "kind": "Learn",
+          "label": "Read model context protocol, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/14-model-context-protocol"
+        },
+        {
+          "id": "w7-build",
+          "kind": "Build",
+          "label": "Build a local read-only MCP tool over a small fixture dataset. Document its schema and test valid, invalid, and untrusted inputs."
+        },
+        {
+          "id": "w7-ship",
+          "kind": "Ship",
+          "label": "Keep a recorded integration demo and a short contract explaining permissions, error behavior, and why MCP is useful here."
+        },
+        {
+          "id": "w7-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "State & orchestration",
+      "goal": "Choose workflow structure from observed needs.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/16-langgraph-state-machines",
+        "phases/11-llm-engineering/17-agent-framework-tradeoffs"
+      ],
+      "project": "projects/typed-workflow-agent-with-mastra",
+      "tasks": [
+        {
+          "id": "w8-read-1",
+          "kind": "Learn",
+          "label": "Read langgraph state machines, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/16-langgraph-state-machines"
+        },
+        {
+          "id": "w8-read-2",
+          "kind": "Learn",
+          "label": "Read agent framework tradeoffs, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/17-agent-framework-tradeoffs"
+        },
+        {
+          "id": "w8-build",
+          "kind": "Build",
+          "label": "Model a multi-step workflow with explicit state, retry boundaries, and recovery. Compare a plain state machine to one framework."
+        },
+        {
+          "id": "w8-ship",
+          "kind": "Ship",
+          "label": "Write a one-page decision record with complexity, debugging, lock-in, and recovery tradeoffs. Include a restart test."
+        },
+        {
+          "id": "w8-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Cost & latency",
+      "goal": "Measure the cost of useful answers, not only token prices.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/11-caching-cost",
+        "phases/11-llm-engineering/15-prompt-caching"
+      ],
+      "project": "projects/token-counter-and-cost-meter",
+      "tasks": [
+        {
+          "id": "w9-read-1",
+          "kind": "Learn",
+          "label": "Read caching cost, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/11-caching-cost"
+        },
+        {
+          "id": "w9-read-2",
+          "kind": "Learn",
+          "label": "Read prompt caching, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/15-prompt-caching"
+        },
+        {
+          "id": "w9-build",
+          "kind": "Build",
+          "label": "Benchmark latency and tokens per request. Add one cache and document invalidation. Compare quality and cost before and after."
+        },
+        {
+          "id": "w9-ship",
+          "kind": "Ship",
+          "label": "Save a report with p50/p95 latency, cache hits, estimated cost, and quality regressions. Explain the workload and sample size."
+        },
+        {
+          "id": "w9-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Production habits",
+      "goal": "Make failures diagnosable and releases repeatable.",
+      "hours": 8,
+      "lessons": [
+        "phases/11-llm-engineering/13-production-app",
+        "phases/17-infrastructure-and-production/13-llm-observability"
+      ],
+      "project": "projects/llm-gateway-with-fallbacks",
+      "tasks": [
+        {
+          "id": "w10-read-1",
+          "kind": "Learn",
+          "label": "Read production app, run its example, and attempt the quiz.",
+          "lesson": "phases/11-llm-engineering/13-production-app"
+        },
+        {
+          "id": "w10-read-2",
+          "kind": "Learn",
+          "label": "Read llm observability, run its example, and attempt the quiz.",
+          "lesson": "phases/17-infrastructure-and-production/13-llm-observability"
+        },
+        {
+          "id": "w10-build",
+          "kind": "Build",
+          "label": "Package the assistant behind an API with timeouts, retries, structured logs, secret handling, and a health check. Test dependency outages."
+        },
+        {
+          "id": "w10-ship",
+          "kind": "Ship",
+          "label": "Write a setup guide and incident runbook. Demonstrate a clean start and one recoverable failure without leaking secrets."
+        },
+        {
+          "id": "w10-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Capstone hardening",
+      "goal": "Turn the prototype into a defensible applied AI project.",
+      "hours": 8,
+      "lessons": [
+        "phases/14-agent-engineering/30-eval-driven-agent-development",
+        "phases/14-agent-engineering/27-prompt-injection-defense"
+      ],
+      "project": "projects/source-grounded-study-coach",
+      "tasks": [
+        {
+          "id": "w11-read-1",
+          "kind": "Learn",
+          "label": "Read eval driven agent development, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/30-eval-driven-agent-development"
+        },
+        {
+          "id": "w11-read-2",
+          "kind": "Learn",
+          "label": "Read prompt injection defense, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/27-prompt-injection-defense"
+        },
+        {
+          "id": "w11-build",
+          "kind": "Build",
+          "label": "Run the full held-out eval suite, add adversarial cases, and close the highest-impact failure category. Review permissions and data retention."
+        },
+        {
+          "id": "w11-ship",
+          "kind": "Ship",
+          "label": "Ship a versioned release candidate with eval results, known limitations, and a reproducible offline demo."
+        },
+        {
+          "id": "w11-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Demo & portfolio",
+      "goal": "Make the engineering judgment visible to a user or interviewer.",
+      "hours": 8,
+      "lessons": [
+        "phases/14-agent-engineering/47-outcomes-before-output",
+        "phases/14-agent-engineering/52-design-success-metrics"
+      ],
+      "project": "projects/doc-qa-with-citations",
+      "tasks": [
+        {
+          "id": "w12-read-1",
+          "kind": "Learn",
+          "label": "Read outcomes before output, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/47-outcomes-before-output"
+        },
+        {
+          "id": "w12-read-2",
+          "kind": "Learn",
+          "label": "Read design success metrics, run its example, and attempt the quiz.",
+          "lesson": "phases/14-agent-engineering/52-design-success-metrics"
+        },
+        {
+          "id": "w12-build",
+          "kind": "Build",
+          "label": "Polish the same capstone. Record a five-minute demo: user intent, workflow, results, failure handling, cost, and tradeoffs."
+        },
+        {
+          "id": "w12-ship",
+          "kind": "Ship",
+          "label": "Publish a README with architecture, clean setup, evaluation evidence, limitations, and next steps. Re-run everything from a clean checkout."
+        },
+        {
+          "id": "w12-reflect",
+          "kind": "Reflect",
+          "label": "Write what failed, what changed, and what you can now explain. Add an artifact path or commit link below."
+        }
+      ]
+    }
+  ]
+}

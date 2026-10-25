@@ -135,5 +135,7 @@ site/manuals.html
 !manuals/*/capture/gpu/out-*/*.log
 
 .project-validation/
+.learning-progress.json
+.learning-progress.json.tmp
 projects/*/solution/output/
 projects/*/solution/demo-output/

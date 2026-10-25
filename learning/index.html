@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Applied AI / Learning studio</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.mjs"></script></head>
+<body>
+  <header><a class="brand" href="/">applied<span>ai</span><small>LEARNING STUDIO</small></a><div class="utilities"><span id="saveStatus" role="status">Loading progress…</span><button id="export">Export progress</button><button id="import">Import</button><input type="file" id="importFile" accept="application/json,.json" hidden></div></header>
+  <main>
+    <section class="hero"><div><p class="eyebrow">YOUR 12-WEEK BUILDING SEASON</p><h1>Learn it.<br><em>Make it work.</em></h1><p class="intro">A Phase 11-first route from LLM foundations to a production-minded AI portfolio. Read a little. Build a lot. Keep the evidence.</p></div><div class="hero-card"><p class="eyebrow">THE NORTH STAR</p><h2>One useful AI product.<br>Twelve weeks of proof.</h2><p>Build a support or knowledge assistant with grounded answers, measured quality, safe tools, and a clear demo.</p><span class="pill">6–8 hours / week · adjustable pace</span></div></section>
+    <section class="metrics" aria-label="Your progress"><div><span id="percent">0%</span><small>ROUTE COMPLETE</small></div><div><span id="completed">0 / 0</span><small>TASKS FINISHED</small></div><div><span id="hoursTotal">0 h</span><small>TIME INVESTED</small></div><div><span id="nextWeek">Week 01</span><small>NEXT UNFINISHED WEEK</small></div></section>
+    <div class="workspace"><aside><p class="eyebrow">THE ROUTE</p><nav id="weeks" aria-label="Select a week"></nav><details class="backfill"><summary>Foundations, when needed</summary><p>Pause only for a specific gap: Python & HTTP → Phase 00; vectors → Phase 01; training & overfitting → Phase 02; attention & tokens → Phase 07. These are optional backfill, not a prerequisite marathon.</p></details></aside><section id="week" aria-label="Selected week"></section></div>
+    <footer>Progress stays in .learning-progress.json on this computer. Export a backup before moving machines. No account or API key needed for the dashboard.</footer>
+  </main>
+  <dialog id="reader"><div class="reader-top"><h2 id="readerTitle">Lesson</h2><button id="closeReader">Close lesson</button></div><a id="sourceLink" target="_blank" rel="noreferrer">Open formatted lesson & code on GitHub ↗</a><article id="lessonText"></article><section id="quiz"></section></dialog>
+</body></html>

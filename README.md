@@ -1,3 +1,21 @@
+# Applied AI Engineering — personal learning studio
+
+Start with Phase 11 and build one useful AI product over a flexible 12-week route. The local dashboard includes weekly checklists, lesson reading, practice quizzes, notes, evidence, hours, and progress backup/restore.
+
+```bash
+git -c core.longpaths=true clone https://github.com/athulbaburaj/applied-ai-engineering.git
+cd applied-ai-engineering
+node learning/server.mjs
+```
+
+Requires Node.js 20+. Open <http://127.0.0.1:4311>. No installation step or API key is needed for the dashboard. Progress is saved locally and ignored by Git.
+
+**[Learning studio guide and 12-week route](learning/README.md)** · **[Customize the curriculum](learning/curriculum.json)**
+
+The original curriculum and attribution continue below.
+
+---
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/readme/header-dark.svg">
